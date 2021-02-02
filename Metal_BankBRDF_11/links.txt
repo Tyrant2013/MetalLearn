@@ -1,0 +1,13 @@
+https://blog.csdn.net/cordova/category_9734156.html
+
+01: 绘制第一个三角形 https://jiangxh1992.blog.csdn.net/article/details/104546299
+02: 纹理贴图 https://jiangxh1992.blog.csdn.net/article/details/104563168
+03: MTLVertexDescriptor
+04: OBJ模型加载
+05: Uniform Buffer
+06: 漫反射
+07: 镜面反射
+08: 环境光
+09: Blinn-Phong光照模型
+10: BRDF: Cook-Torrance光照模型
+11:

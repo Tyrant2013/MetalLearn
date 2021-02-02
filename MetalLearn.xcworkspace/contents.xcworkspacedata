@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Metal_BankBRDF_11/links.txt">
+   </FileRef>
+   <FileRef
+      location = "group:Metal_Triangle_01/Metal_Triangle_01.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Metal_Triangle_01/../Metal_TextureMapping_02/Metal_TextureMapping_02.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Metal_VertexDescriptor_03/Metal_VertexDescriptor_03.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Metal_AAPLMesh_04/Metal_AAPLMesh_04.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Metal_UniformBuffer_05/Metal_UniformBuffer_05.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Metal_DiffuseRefulection_06/Metal_DiffuseRefulection_06.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Metal_SpecularReflection_07/Metal_SpecularReflection_07.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Metal_AmbientGlow_08/Metal_AmbientGlow_08.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Metal_Blinn-Phong_09/Metal_Blinn-Phong_09.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Metal_CookTorrance_10/Metal_CookTorrance_10.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Metal_BankBRDF_11/Metal_BankBRDF_11.xcodeproj">
+   </FileRef>
+</Workspace>
