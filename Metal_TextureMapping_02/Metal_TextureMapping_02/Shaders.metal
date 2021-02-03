@@ -15,39 +15,27 @@
 
 using namespace metal;
 
-typedef struct
-{
-    float3 position [[attribute(VertexAttributePosition)]];
-    float2 texCoord [[attribute(VertexAttributeTexcoord)]];
-} Vertex;
-
-typedef struct
-{
+typedef struct {
     float4 position [[position]];
     float2 texCoord;
 } ColorInOut;
 
-vertex ColorInOut vertexShader(Vertex in [[stage_in]],
-                               constant Uniforms & uniforms [[ buffer(BufferIndexUniforms) ]])
-{
+vertex ColorInOut vertexShader(constant Vertex *vertexArr [[buffer(0)]],
+                               uint vid [[vertex_id]]) {
     ColorInOut out;
-
-    float4 position = float4(in.position, 1.0);
-    out.position = uniforms.projectionMatrix * uniforms.modelViewMatrix * position;
-    out.texCoord = in.texCoord;
-
+    float4 position = vector_float4(vertexArr[vid].pos, 0, 1.0);
+    out.position = position;
+    // 比 01 多的代码
+    out.texCoord = vertexArr[vid].uv;
     return out;
 }
-
-fragment float4 fragmentShader(ColorInOut in [[stage_in]],
-                               constant Uniforms & uniforms [[ buffer(BufferIndexUniforms) ]],
-                               texture2d<half> colorMap     [[ texture(TextureIndexColor) ]])
-{
-    constexpr sampler colorSampler(mip_filter::linear,
-                                   mag_filter::linear,
-                                   min_filter::linear);
-
-    half4 colorSample   = colorMap.sample(colorSampler, in.texCoord.xy);
-
-    return float4(colorSample);
+// 返回值从 01 的float4 改成 half4
+fragment half4 fragmentShader(ColorInOut in [[stage_in]],
+                               // 比 01 多了一个参数
+                               texture2d<half> mtltexture01 [[texture(0)]]) {
+//    return float4(1.0, 0, 0, 0);  // 这是 01 的代码， 注释掉
+    
+    constexpr sampler textureSampler(mag_filter::linear, min_filter:: linear);
+    const half4 color = mtltexture01.sample(textureSampler, in.texCoord);
+    return color;
 }
