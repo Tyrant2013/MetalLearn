@@ -57,7 +57,10 @@ class Renderer: NSObject, MTKViewDelegate {
         // 比 01 多的代码
         let textureLoader = MTKTextureLoader(device: device)
         let textureLoaderOptions = [
+            // 表示我们这张贴图是只读的，不可写入，符合我们只是采样读取贴图数据的需求，
+            // 明确配置只读是为了让Metal内部做一些相关的优化，只有在必要的时候才设置可读可写
             MTKTextureLoader.Option.textureUsage : MTLTextureUsage.shaderRead.rawValue,
+            // 表示我们张贴图只有GPU可以访问，CPU不可访问，这种模式下Metal可以进一步做一些优化，提高性能。
             MTKTextureLoader.Option.textureStorageMode : MTLStorageMode.private.rawValue
         ] as [MTKTextureLoader.Option : Any]
         guard let tt = try? textureLoader.newTexture(name: "texture01",
@@ -82,6 +85,7 @@ class Renderer: NSObject, MTKViewDelegate {
             renderEncoder.setRenderPipelineState(pipelineState)
             renderEncoder.setDepthStencilState(depthState)
             renderEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
+            // 将我们的纹理贴图传递到片段着色器中，使用setFragmentTexture方法我们可以将贴图资源传入片段着色器的textrure buffer中，从而可以在片段着色器中访问，注意index要和片段着色器参数的语义绑定相对应。
             renderEncoder.setFragmentTexture(mtltexture01, index: 0) // 比 01 多的代码
             renderEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3)
             renderEncoder.popDebugGroup()
