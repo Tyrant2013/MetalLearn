@@ -13,6 +13,10 @@
 		AEAB074225C9433E003B217A /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = AEAB074125C9433E003B217A /* Shaders.metal */; };
 		AEAB074525C9433E003B217A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEAB074325C9433E003B217A /* Main.storyboard */; };
 		AEAB074725C94340003B217A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEAB074625C94340003B217A /* Assets.xcassets */; };
+		AEAB085125CBC45F003B217A /* AAPLMathUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB085025CBC45F003B217A /* AAPLMathUtilities.swift */; };
+		AEAB085225CBC45F003B217A /* AAPLMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB084F25CBC45F003B217A /* AAPLMesh.swift */; };
+		AEAB085425CBC46F003B217A /* Temple.mtl in Resources */ = {isa = PBXBuildFile; fileRef = AEAB081825C9479F003B217A /* Temple.mtl */; };
+		AEAB085525CBC470003B217A /* Temple.obj in Resources */ = {isa = PBXBuildFile; fileRef = AEAB081925C947A0003B217A /* Temple.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,8 @@
 		AEAB074825C94340003B217A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEAB081825C9479F003B217A /* Temple.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = Temple.mtl; sourceTree = "<group>"; };
 		AEAB081925C947A0003B217A /* Temple.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = Temple.obj; sourceTree = "<group>"; };
+		AEAB084F25CBC45F003B217A /* AAPLMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAPLMesh.swift; sourceTree = "<group>"; };
+		AEAB085025CBC45F003B217A /* AAPLMathUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAPLMathUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 		AEAB073925C9433E003B217A /* Metal_UniformBuffer_05 */ = {
 			isa = PBXGroup;
 			children = (
+				AEAB084E25CBC45E003B217A /* AAPL */,
 				AEAB073A25C9433E003B217A /* AppDelegate.swift */,
 				AEAB073C25C9433E003B217A /* ShaderTypes.h */,
 				AEAB073D25C9433E003B217A /* Renderer.swift */,
@@ -71,6 +78,15 @@
 				AEAB074825C94340003B217A /* Info.plist */,
 			);
 			path = Metal_UniformBuffer_05;
+			sourceTree = "<group>";
+		};
+		AEAB084E25CBC45E003B217A /* AAPL */ = {
+			isa = PBXGroup;
+			children = (
+				AEAB085025CBC45F003B217A /* AAPLMathUtilities.swift */,
+				AEAB084F25CBC45F003B217A /* AAPLMesh.swift */,
+			);
+			path = AAPL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +148,8 @@
 			files = (
 				AEAB074725C94340003B217A /* Assets.xcassets in Resources */,
 				AEAB074525C9433E003B217A /* Main.storyboard in Resources */,
+				AEAB085525CBC470003B217A /* Temple.obj in Resources */,
+				AEAB085425CBC46F003B217A /* Temple.mtl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEAB085225CBC45F003B217A /* AAPLMesh.swift in Sources */,
 				AEAB074225C9433E003B217A /* Shaders.metal in Sources */,
 				AEAB073E25C9433E003B217A /* Renderer.swift in Sources */,
+				AEAB085125CBC45F003B217A /* AAPLMathUtilities.swift in Sources */,
 				AEAB074025C9433E003B217A /* GameViewController.swift in Sources */,
 				AEAB073B25C9433E003B217A /* AppDelegate.swift in Sources */,
 			);
