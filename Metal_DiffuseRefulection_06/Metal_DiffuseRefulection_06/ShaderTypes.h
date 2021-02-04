@@ -42,6 +42,14 @@ typedef struct
 {
     matrix_float4x4 projectionMatrix;
     matrix_float4x4 modelViewMatrix;
+    matrix_float4x4 modelMatrix;
+    matrix_float4x4 viewMatrix;
+    
+    float IL; // 光源强度
+    float Kd; // 漫反射系数  (0 ~ 1)
+    
+    vector_float3 directionalLightDirection;
+    vector_float3 directionalLightColor;
 } Uniforms;
 
 #endif /* ShaderTypes_h */

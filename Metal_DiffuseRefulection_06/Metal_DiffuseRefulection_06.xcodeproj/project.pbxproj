@@ -13,6 +13,10 @@
 		AEAB076325C9435D003B217A /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = AEAB076225C9435D003B217A /* Shaders.metal */; };
 		AEAB076625C9435D003B217A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEAB076425C9435D003B217A /* Main.storyboard */; };
 		AEAB076825C9435F003B217A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEAB076725C9435F003B217A /* Assets.xcassets */; };
+		AEAB085725CBE758003B217A /* Temple.mtl in Resources */ = {isa = PBXBuildFile; fileRef = AEAB081C25C9482F003B217A /* Temple.mtl */; };
+		AEAB085E25CBE97C003B217A /* AAPLMathUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB085D25CBE97C003B217A /* AAPLMathUtilities.swift */; };
+		AEAB085F25CBE97C003B217A /* AAPLMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB085C25CBE97C003B217A /* AAPLMesh.swift */; };
+		AEAB087225CBF4F0003B217A /* Temple.obj in Resources */ = {isa = PBXBuildFile; fileRef = AEAB087125CBF4F0003B217A /* Temple.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +29,10 @@
 		AEAB076525C9435D003B217A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEAB076725C9435F003B217A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEAB076925C9435F003B217A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AEAB081B25C9482F003B217A /* Temple.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = Temple.obj; sourceTree = "<group>"; };
 		AEAB081C25C9482F003B217A /* Temple.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = Temple.mtl; sourceTree = "<group>"; };
+		AEAB085C25CBE97C003B217A /* AAPLMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAPLMesh.swift; sourceTree = "<group>"; };
+		AEAB085D25CBE97C003B217A /* AAPLMathUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAPLMathUtilities.swift; sourceTree = "<group>"; };
+		AEAB087125CBF4F0003B217A /* Temple.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Temple.obj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 		AEAB075A25C9435D003B217A /* Metal_DiffuseRefulection_06 */ = {
 			isa = PBXGroup;
 			children = (
+				AEAB085B25CBE97B003B217A /* AAPL */,
 				AEAB075B25C9435D003B217A /* AppDelegate.swift */,
 				AEAB075D25C9435D003B217A /* ShaderTypes.h */,
 				AEAB075E25C9435D003B217A /* Renderer.swift */,
@@ -67,10 +74,19 @@
 				AEAB076425C9435D003B217A /* Main.storyboard */,
 				AEAB076725C9435F003B217A /* Assets.xcassets */,
 				AEAB081C25C9482F003B217A /* Temple.mtl */,
-				AEAB081B25C9482F003B217A /* Temple.obj */,
+				AEAB087125CBF4F0003B217A /* Temple.obj */,
 				AEAB076925C9435F003B217A /* Info.plist */,
 			);
 			path = Metal_DiffuseRefulection_06;
+			sourceTree = "<group>";
+		};
+		AEAB085B25CBE97B003B217A /* AAPL */ = {
+			isa = PBXGroup;
+			children = (
+				AEAB085D25CBE97C003B217A /* AAPLMathUtilities.swift */,
+				AEAB085C25CBE97C003B217A /* AAPLMesh.swift */,
+			);
+			path = AAPL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +148,8 @@
 			files = (
 				AEAB076825C9435F003B217A /* Assets.xcassets in Resources */,
 				AEAB076625C9435D003B217A /* Main.storyboard in Resources */,
+				AEAB087225CBF4F0003B217A /* Temple.obj in Resources */,
+				AEAB085725CBE758003B217A /* Temple.mtl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEAB085F25CBE97C003B217A /* AAPLMesh.swift in Sources */,
 				AEAB076325C9435D003B217A /* Shaders.metal in Sources */,
 				AEAB075F25C9435D003B217A /* Renderer.swift in Sources */,
+				AEAB085E25CBE97C003B217A /* AAPLMathUtilities.swift in Sources */,
 				AEAB076125C9435D003B217A /* GameViewController.swift in Sources */,
 				AEAB075C25C9435D003B217A /* AppDelegate.swift in Sources */,
 			);
