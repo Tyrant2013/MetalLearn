@@ -88,32 +88,33 @@ class Renderer: NSObject, MTKViewDelegate {
     }
     
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
+        // 屏幕宽高比
         let aspect = Float(size.width / size.height)
+        // 透视相机参数， 视口的角度
         let fov = Float(65.0 * (.pi / 180.0))
+        // 近裁面
         let nearPlane: Float = 1.0
+        // 远裁面
         let farPlane: Float = 1500.0
         projectionMatrix = matrix_perspective_left_hand(fovyRadians: fov, aspect: aspect, nearZ: nearPlane, farZ: farPlane)
     }
     
-//    private func matrix_perspective_left_hand(fovyRadians: Float, aspect: Float, nearZ: Float, farZ: Float) -> matrix_float4x4 {
-//        let ys = 1 / tanf(fovyRadians * 0.5)
-//        let xs = ys / aspect
-//        let zs = farZ / (farZ - nearZ)
-//        return matrix_float4x4(SIMD4<Float>(xs, 0, 0, 0),
-//                               SIMD4<Float>(0, ys, 0, 0),
-//                               SIMD4<Float>(0, 0, zs, 1),
-//                               SIMD4<Float>(0, 0, -nearZ * zs, 0))
-//    }
-    
     private func updateGameState() {
-        let uniforms = uniformBuffer.contents().assumingMemoryBound(to: Uniforms.self)
+        // 将相机往后拉开1000的距离，然后绕x轴逆时针渲染一定角度略微抬高相机俯视原点，
+        // 然后绕y轴旋转_rotation角度，是相机围绕原点旋转。
+        // ModelMatrix保持模型在原点不动，当然也可以让相机固定，让模型自身旋转。
         
+        let uniforms = uniformBuffer.contents().assumingMemoryBound(to: Uniforms.self)
         uniforms.pointee.projectionMatrix = projectionMatrix
+        
         let __x = matrix4x4_translation(tx: 0.0, ty: 0, tz: 1000)
+        
         let ___x = matrix4x4_rotation(radians: -0.5, axis: vector_float3(1, 0, 0))
         let ___y = matrix4x4_rotation(radians: rotation, axis: vector_float3(0, 1, 0))
         let __y = matrix_multiply(___x, ___y)
+        
         let viewMatrix = matrix_multiply(__x, __y)
+        
         let rotationAxis = vector_float3(0, 1, 0)
         var modelMatrix = matrix4x4_rotation(radians: 0, axis: rotationAxis)
         let translation = matrix4x4_translation(tx: 0.0, ty: 0.0, tz: 0.0)
