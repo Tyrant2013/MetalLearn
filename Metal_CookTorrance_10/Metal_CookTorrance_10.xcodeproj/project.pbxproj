@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE75280325DF9A6F008AE1A2 /* AAPLMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75280225DF9A6F008AE1A2 /* AAPLMesh.swift */; };
+		AE75280425DF9A6F008AE1A2 /* AAPLMathUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75280125DF9A6F008AE1A2 /* AAPLMathUtilities.swift */; };
+		AE75280625DF9A9A008AE1A2 /* Temple.mtl in Resources */ = {isa = PBXBuildFile; fileRef = AEAB082825C948E9003B217A /* Temple.mtl */; };
+		AE75280725DF9A9A008AE1A2 /* Temple.obj in Resources */ = {isa = PBXBuildFile; fileRef = AEAB082725C948E9003B217A /* Temple.obj */; };
 		AEAB07E025C943B8003B217A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB07DF25C943B8003B217A /* AppDelegate.swift */; };
 		AEAB07E325C943B8003B217A /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB07E225C943B8003B217A /* Renderer.swift */; };
 		AEAB07E525C943B8003B217A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB07E425C943B8003B217A /* GameViewController.swift */; };
@@ -16,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE75280125DF9A6F008AE1A2 /* AAPLMathUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAPLMathUtilities.swift; sourceTree = "<group>"; };
+		AE75280225DF9A6F008AE1A2 /* AAPLMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAPLMesh.swift; sourceTree = "<group>"; };
 		AEAB07DC25C943B8003B217A /* Metal_CookTorrance_10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metal_CookTorrance_10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEAB07DF25C943B8003B217A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEAB07E125C943B8003B217A /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
@@ -40,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE75280025DF9A6E008AE1A2 /* AAPL */ = {
+			isa = PBXGroup;
+			children = (
+				AE75280125DF9A6F008AE1A2 /* AAPLMathUtilities.swift */,
+				AE75280225DF9A6F008AE1A2 /* AAPLMesh.swift */,
+			);
+			path = AAPL;
+			sourceTree = "<group>";
+		};
 		AEAB07D325C943B8003B217A = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +74,7 @@
 		AEAB07DE25C943B8003B217A /* Metal_CookTorrance_10 */ = {
 			isa = PBXGroup;
 			children = (
+				AE75280025DF9A6E008AE1A2 /* AAPL */,
 				AEAB07DF25C943B8003B217A /* AppDelegate.swift */,
 				AEAB07E125C943B8003B217A /* ShaderTypes.h */,
 				AEAB07E225C943B8003B217A /* Renderer.swift */,
@@ -132,6 +148,8 @@
 			files = (
 				AEAB07EC25C943B9003B217A /* Assets.xcassets in Resources */,
 				AEAB07EA25C943B8003B217A /* Main.storyboard in Resources */,
+				AE75280725DF9A9A008AE1A2 /* Temple.obj in Resources */,
+				AE75280625DF9A9A008AE1A2 /* Temple.mtl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +163,8 @@
 				AEAB07E725C943B8003B217A /* Shaders.metal in Sources */,
 				AEAB07E325C943B8003B217A /* Renderer.swift in Sources */,
 				AEAB07E525C943B8003B217A /* GameViewController.swift in Sources */,
+				AE75280325DF9A6F008AE1A2 /* AAPLMesh.swift in Sources */,
+				AE75280425DF9A6F008AE1A2 /* AAPLMathUtilities.swift in Sources */,
 				AEAB07E025C943B8003B217A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE7527E425DF6724008AE1A2 /* Temple.mtl in Resources */ = {isa = PBXBuildFile; fileRef = AEAB081E25C94884003B217A /* Temple.mtl */; };
+		AE7527E625DF6728008AE1A2 /* Temple.obj in Resources */ = {isa = PBXBuildFile; fileRef = AEAB081F25C94884003B217A /* Temple.obj */; };
+		AE7527EB25DF673D008AE1A2 /* AAPLMathUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7527EA25DF673D008AE1A2 /* AAPLMathUtilities.swift */; };
+		AE7527EC25DF673D008AE1A2 /* AAPLMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7527E925DF673D008AE1A2 /* AAPLMesh.swift */; };
 		AEAB077D25C94372003B217A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB077C25C94372003B217A /* AppDelegate.swift */; };
 		AEAB078025C94372003B217A /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB077F25C94372003B217A /* Renderer.swift */; };
 		AEAB078225C94372003B217A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB078125C94372003B217A /* GameViewController.swift */; };
@@ -16,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE7527E925DF673D008AE1A2 /* AAPLMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAPLMesh.swift; sourceTree = "<group>"; };
+		AE7527EA25DF673D008AE1A2 /* AAPLMathUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAPLMathUtilities.swift; sourceTree = "<group>"; };
 		AEAB077925C94372003B217A /* Metal_SpecularReflection_07.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metal_SpecularReflection_07.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEAB077C25C94372003B217A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEAB077E25C94372003B217A /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
@@ -40,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE7527E825DF673C008AE1A2 /* AAPL */ = {
+			isa = PBXGroup;
+			children = (
+				AE7527EA25DF673D008AE1A2 /* AAPLMathUtilities.swift */,
+				AE7527E925DF673D008AE1A2 /* AAPLMesh.swift */,
+			);
+			path = AAPL;
+			sourceTree = "<group>";
+		};
 		AEAB077025C94372003B217A = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +74,7 @@
 		AEAB077B25C94372003B217A /* Metal_SpecularReflection_07 */ = {
 			isa = PBXGroup;
 			children = (
+				AE7527E825DF673C008AE1A2 /* AAPL */,
 				AEAB077C25C94372003B217A /* AppDelegate.swift */,
 				AEAB077E25C94372003B217A /* ShaderTypes.h */,
 				AEAB077F25C94372003B217A /* Renderer.swift */,
@@ -132,6 +148,8 @@
 			files = (
 				AEAB078925C94374003B217A /* Assets.xcassets in Resources */,
 				AEAB078725C94372003B217A /* Main.storyboard in Resources */,
+				AE7527E625DF6728008AE1A2 /* Temple.obj in Resources */,
+				AE7527E425DF6724008AE1A2 /* Temple.mtl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE7527EC25DF673D008AE1A2 /* AAPLMesh.swift in Sources */,
 				AEAB078425C94372003B217A /* Shaders.metal in Sources */,
 				AEAB078025C94372003B217A /* Renderer.swift in Sources */,
+				AE7527EB25DF673D008AE1A2 /* AAPLMathUtilities.swift in Sources */,
 				AEAB078225C94372003B217A /* GameViewController.swift in Sources */,
 				AEAB077D25C94372003B217A /* AppDelegate.swift in Sources */,
 			);
